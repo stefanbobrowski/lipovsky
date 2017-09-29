@@ -78,42 +78,42 @@ body {
   min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  background-color: tomato; }
+  background-color: #fff; }
 
 header {
   position: relative;
   padding: 5px 0;
-  background-color: #FFDF06; }
+  background-color: #F2E4CD; }
   header .margin-color {
     position: absolute;
     left: 0;
     display: block;
-    background-color: #06502F;
+    background-color: #5B1612;
     width: 30vw;
     height: calc(100% - 10px); }
   header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  header img {
-    position: absolute;
-    left: 0px;
-    top: 0;
-    width: 68px; }
   header .title {
     position: relative;
-    padding: 10px 20px 10px 120px;
+    padding: 10px 20px 10px 200px;
     text-transform: uppercase;
-    background-color: #06502F; }
+    background-color: #5B1612; }
+    header .title .logo {
+      position: absolute;
+      right: 280px;
+      top: 9px;
+      height: 63.75px; }
     header .title h1 {
       margin-left: -2px;
       font-size: 42px;
       font-weight: 900;
-      line-height: 36px;
+      line-height: 38px;
       letter-spacing: 4px;
-      color: #FFDF06; }
+      color: #F2E4CD; }
     header .title h2 {
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: 1.5px;
       color: #fff; }
     header .title h3 {
@@ -123,10 +123,10 @@ header {
       color: #fff; }
     header .title .bar {
       display: block;
-      width: 110%;
-      margin: 2px 0 4px 0;
+      width: 142%;
+      margin: 5px 0 5px -78px;
       height: 6px;
-      background-color: #FFDF06; }
+      background-color: #F2E4CD; }
   header nav {
     display: flex; }
     header nav a {
@@ -139,13 +139,20 @@ header {
       color: #333;
       transition: color 0.3s ease; }
       header nav a:hover {
-        color: #06502F; }
-  header .call-now .number {
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 1px; }
-  header .call-now img {
-    width: 10px; }
+        color: #5B1612; }
+  header .call-now {
+    display: flex;
+    align-items: center;
+    padding-right: 20px; }
+    header .call-now img {
+      display: block;
+      height: 16px;
+      margin-right: 5px; }
+    header .call-now .number {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 16px;
+      letter-spacing: 1px; }
 
 .about h1 {
   font-size: 52px;
