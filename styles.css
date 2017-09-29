@@ -62,10 +62,15 @@ input:-moz-placeholder {
 /* Styles */
 a {
   text-decoration: none;
-  color: #515151; }
+  color: #333; }
 
 h1, h2, h3 {
-  color: #292929; }
+  color: #333; }
+
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 body {
   display: flex;
@@ -73,7 +78,7 @@ body {
   min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  background-color: purple; }
+  background-color: tomato; }
 
 header {
   position: relative;
@@ -81,17 +86,15 @@ header {
   background-color: #FFDF06; }
   header .margin-color {
     position: absolute;
+    left: 0;
     display: block;
     background-color: #06502F;
-    width: 30px;
-    height: 50px; }
+    width: 30vw;
+    height: calc(100% - 10px); }
   header .inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; }
+    align-items: center; }
   header img {
     position: absolute;
     left: 0px;
@@ -127,15 +130,36 @@ header {
   header nav {
     display: flex; }
     header nav a {
-      padding: 20px;
-      border: 1px solid red;
-      font-size: 20px;
+      margin: 0 5px;
+      padding: 20px 20px;
+      font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;
-      color: #292929; }
+      letter-spacing: 1px;
+      color: #333;
+      transition: color 0.3s ease; }
+      header nav a:hover {
+        color: #06502F; }
+  header .call-now .number {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px; }
   header .call-now img {
     width: 10px; }
+
+.about h1 {
+  font-size: 52px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.about p {
+  font-size: 17px;
+  color: #333; }
 
 main {
   flex: 1;
   background-color: #fff; }
+
+footer {
+  background-color: purple; }

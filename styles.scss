@@ -38,8 +38,8 @@ input:-moz-placeholder {
 
 /* Variables */
 $font: 'Nunito Sans', sans-serif;
-$text-color: #515151;
-$header-color: #292929;
+$text-color: #333;
+$header-color: #333;
 $color-1: #06502F;
 $color-2: #FFDF06;
 
@@ -53,13 +53,19 @@ h1, h2, h3 {
     color: $header-color;
 }
 
+.inner {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 	font-family: $font;
 	font-size: 16px;
-    background-color: purple;
+    background-color: tomato;
 }
 
 header {
@@ -69,19 +75,17 @@ header {
 
 	.margin-color {
 		position: absolute;
+		left: 0;
 		display: block;
 		background-color: $color-1;
-		width: 30px;
-		height: 50px;
+		width: 30vw;
+		height: calc(100% - 10px);
 	}
 
 	.inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
-		max-width: 1200px;
-		margin: 0 auto;
 	}
 
 	img {
@@ -131,23 +135,52 @@ header {
     nav {
 		display: flex;
         a {
-			padding: 20px;
-			border: 1px solid red;
-            font-size: 20px;
+			margin: 0 5px;
+			padding: 20px 20px;
+            font-size: 18px;
 			font-weight: 900;
             text-transform: uppercase;
+			letter-spacing: 1px;
 			color: $header-color;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: $color-1;
+			}
         }
     }
 
     .call-now {
+		.number {
+			font-size: 18px;
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
         img {
             width: 10px;
         }
     }
 }
 
+.about {
+	h1 {
+		font-size: 52px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	p {
+		font-size: 17px;
+		color: $text-color;
+	}
+}
+
 main {
 	flex: 1;
     background-color: #fff;
+}
+
+footer {
+	background-color: purple;
 }
