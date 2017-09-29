@@ -63,13 +63,37 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	position: relative;
+	padding: 5px 0;
     background-color: $color-2;
 
+	.margin-color {
+		position: absolute;
+		display: block;
+		background-color: $color-1;
+		width: 30px;
+		height: 50px;
+	}
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	img {
+		position: absolute;
+		left: 0px;
+		top: 0;
+		width: 68px;
+	}
+
     .title {
-		padding: 10px 20px 10px 60px;
+		position: relative;
+		padding: 10px 20px 10px 120px;
 		text-transform: uppercase;
         background-color: $color-1;
 
@@ -78,7 +102,7 @@ header {
             font-size: 42px;
 			font-weight: 900;
 			line-height: 36px;
-			letter-spacing: 4.2px;
+			letter-spacing: 4px;
             color: $color-2;
         }
 
@@ -88,19 +112,19 @@ header {
             color: #fff;
         }
 
-        .bar {
-            display: block;
-			width: 99%;
-			margin: 2px 0;
-            height: 5px;
-            background-color: $color-2;
-
-        }
-
-        h3 {
-			font-size: 16px;
+		h3 {
+			font-size: 12px;
+			font-weight: 600;
 			letter-spacing: 2px;
 			color: #fff;
+		}
+
+        .bar {
+            display: block;
+			width: 110%;
+			margin: 2px 0 4px 0;
+            height: 6px;
+            background-color: $color-2;
         }
     }
 

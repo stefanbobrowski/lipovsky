@@ -76,12 +76,30 @@ body {
   background-color: purple; }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  padding: 5px 0;
   background-color: #FFDF06; }
+  header .margin-color {
+    position: absolute;
+    display: block;
+    background-color: #06502F;
+    width: 30px;
+    height: 50px; }
+  header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
+  header img {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 68px; }
   header .title {
-    padding: 10px 20px 10px 60px;
+    position: relative;
+    padding: 10px 20px 10px 120px;
     text-transform: uppercase;
     background-color: #06502F; }
     header .title h1 {
@@ -89,22 +107,23 @@ header {
       font-size: 42px;
       font-weight: 900;
       line-height: 36px;
-      letter-spacing: 4.2px;
+      letter-spacing: 4px;
       color: #FFDF06; }
     header .title h2 {
       font-size: 14px;
       letter-spacing: 1.5px;
       color: #fff; }
-    header .title .bar {
-      display: block;
-      width: 99%;
-      margin: 2px 0;
-      height: 5px;
-      background-color: #FFDF06; }
     header .title h3 {
-      font-size: 16px;
+      font-size: 12px;
+      font-weight: 600;
       letter-spacing: 2px;
       color: #fff; }
+    header .title .bar {
+      display: block;
+      width: 110%;
+      margin: 2px 0 4px 0;
+      height: 6px;
+      background-color: #FFDF06; }
   header nav {
     display: flex; }
     header nav a {
