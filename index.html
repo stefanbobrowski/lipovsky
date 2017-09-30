@@ -6,9 +6,12 @@
         <title>J.T. Lipovsky Excavation</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="scripts.js"></script>
 
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
         <header>
@@ -34,24 +37,50 @@
             </div>
         </header>
 
-        <main class="inner">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/header.jpg" alt="" class="img-responsive" />
+                <h1>slide 1</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-1.jpg" alt="" class="img-responsive" />
+                <h1>slide 2</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-2.jpg" alt="" class="img-responsive" />
+                <h1>slide 3</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-3.jpg" alt="" class="img-responsive" />
+                <h1>slide 4</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-4.jpg" alt="" class="img-responsive" />
+                <h1>slide 5</h1>
+            </div>
+        </div>
+
+        <main>
             <div class="sections">
                 <section class="about">
-                    <h1>About</h1>
-                    <p>JT Lipovsky Excavation Family owned and operated in Shelton, Connecticut for over 45 years. There is no job too big or small. <b>Free Estimates!</b></p>
-                    <p>JT Lipovsky Excavation provides reliable and competitive services for our customers at fair prices in Coastal Fairfield County Connecticut. We provide a full range of services from Site Excavation to Home Construction.</p>
+                    <div class="inner">
+                        <h1 class="section-header">About</h1>
+                        <p>J.T. Lipovsky Excavation provides reliable services for our customers at fair prices in Coastal Fairfield County Connecticut. We provide a full range of services from Site Excavation to Home Construction.</p>
+                        <p>J.T. Lipovsky Excavation Family owned and operated in Shelton, Connecticut for over 45 years. There is no job too big or small. <b>Free Estimates!</b></p>
 
+                    </div>
                 </section>
                 <section class="services">
-                    <h1>Services</h1>
-                        <div class="services-slider">
-                                <img src="images/services-1.jpg" alt="">
+                    <div class="inner">
+
+                    <h1 class="section-header">Services</h1>
+                        <!-- <div class="services-slider">
                                 <img src="images/services-2.jpg" alt="">
                                 <img src="images/services-4.jpg" alt="">
                                 <img src="images/services-5.jpg" alt="">
                             </div>
 
-                        </div>
+                        </div> -->
                         <ul class="services-list">
                             <li>Excavation</li>
                             <li>Home construction &amp; additions</li>
@@ -66,17 +95,18 @@
                             <li>Overweight hauling &amp; transport</li>
                             <li>... and more!</li>
                         </ul>
-
+</div>
 
 
                 </section>
 
                 <section class="contact">
-                    <h1>Contact</h1>
+                    <div class="inner">
+                    <h1 class="section-header">Contact</h1>
                     <img src="images/contact-1.jpg">
                     <h2>Contact us today for your free estimate!</h2>
                     <h1>203-913-3013</h1>
-                    <div id="fb-root"></div>
+                    <!-- <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -92,10 +122,10 @@
                 frameborder="0" style="border:0"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDVOFUN7ljMAyFt5EjHPfu9gk8-OGES3jY
                 &q=JT+LIPOVSKY+EXCAVATING" allowfullscreen>
-                </iframe>
-
-                </section>
+                </iframe> -->
             </div>
+                </section>
+            </div> <!-- End .sections -->
 
         </main>
         <footer>
@@ -104,5 +134,8 @@
             </div>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+
+        <script type="text/javascript" src="scripts.js"></script>
     </body>
 </html>

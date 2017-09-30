@@ -49,6 +49,10 @@ a {
     color: $text-color;
 }
 
+p {
+	margin-bottom: 10px;
+}
+
 h1, h2, h3 {
     color: $header-color;
 }
@@ -65,7 +69,7 @@ body {
     min-height: 100vh;
 	font-family: $font;
 	font-size: 16px;
-    background-color: #fff;
+    background-color: #FFF;
 }
 
 header {
@@ -117,10 +121,30 @@ header {
         }
 
 		h3 {
+			position: relative;
+			text-align: center;
 			font-size: 12px;
 			font-weight: 600;
 			letter-spacing: 2px;
 			color: #fff;
+
+			&:before, &:after {
+				position: absolute;
+				top: 50%;
+				display: block;
+				width: 50px;
+				height: 3px;
+				background-color: blue;
+				content: '';
+			}
+
+			&:before {
+				right: 100%;
+			}
+
+			&:after {
+				left: 100%;
+			}
 		}
 
         .bar {
@@ -168,25 +192,117 @@ header {
     }
 }
 
-.about {
-	h1 {
-		font-size: 52px;
-		font-weight: 900;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
 
-	p {
-		font-size: 17px;
-		color: $text-color;
-	}
+.slider{
+	width: 100%;
+  margin:0px auto;
+  text-align: center;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 100%;
+  flex-wrap: wrap;
+  background: fade(#ebebeb, 10%);
+
+  .slide{
+    display:flex;
+    flex: 1 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+width: 100%;
+max-height: 80vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+
+  .slick-arrow {
+	  width: 50px;
+	  height: 50px;
+	  border-radius: 50%;
+	  background-color: rgba($color-1, 0.8);
+	  opacity: 1;
+	  transition: all 0.3s ease;
+
+	  &:hover {
+		  background-color: rgba($color-2, 0.8);
+
+		  &:before {
+			  color: $color-1;
+		  }
+
+	  }
+
+	  &:before {
+		  opacity: 1;
+		  color: $color-2;
+	  }
+	 &.slick-prev {
+		  left: 0;
+		  z-index: 5;
+	  }
+
+	  &.slick-next {
+		  right: 0;
+	  }
+  }
+
+
+
+
+  img {
+	  display: block;
+	  margin:auto;
+	  visibility: hidden;
+	  z-index: 0;
+  }
 }
+
+
+
+
+
 
 main {
 	flex: 1;
     background-color: #fff;
 }
 
+
+.sections {
+
+	section {
+		padding: 50px 0;
+
+		.section-header {
+			margin-bottom: 32px;
+			font-size: 52px;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 17px;
+			font-weight: 600;
+			line-height: 1.6;
+			color: $text-color;
+		}
+	}
+}
+
+.about {
+	background-color: rgba($color-2, 0.8);
+}
+
+.contact {
+	background-color: rgba($color-2, 0.8);
+}
+
 footer {
-	background-color: purple;
+	color: #fff;
+	background-color: $color-1;
 }
