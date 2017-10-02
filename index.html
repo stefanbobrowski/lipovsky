@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="styles.css">
 
         <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css"/>
         <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css"/>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
@@ -30,7 +30,7 @@
                     <a href="Services">Services</a>
                     <a href="Contact">Contact</a>
                 </nav>
-                <div class="call-now">
+                <div class="call-us">
                     <img class="phone-icon" src="images/phone.png">
                     <h1 class="number">203-913-3013</h1>
                 </div>
@@ -39,24 +39,40 @@
 
         <div class="slider">
             <div class="slide">
-                <img src="images/header.jpg" alt="" class="img-responsive" />
+                <img src="images/home-1.jpg" alt="Lipovsky Excavation" class="img-responsive" />
                 <h1>slide 1</h1>
             </div>
             <div class="slide">
-                <img src="images/home-1.jpg" alt="" class="img-responsive" />
+                <img src="images/home-2.jpg" alt="" class="img-responsive" />
                 <h1>slide 2</h1>
             </div>
             <div class="slide">
-                <img src="images/home-2.jpg" alt="" class="img-responsive" />
+                <img src="images/home-3.jpg" alt="" class="img-responsive" />
                 <h1>slide 3</h1>
             </div>
             <div class="slide">
-                <img src="images/home-3.jpg" alt="" class="img-responsive" />
+                <img src="images/home-4.jpg" alt="" class="img-responsive" />
                 <h1>slide 4</h1>
             </div>
             <div class="slide">
-                <img src="images/home-4.jpg" alt="" class="img-responsive" />
+                <img src="images/home-5.jpg" alt="" class="img-responsive" />
                 <h1>slide 5</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-6.jpg" alt="" class="img-responsive" />
+                <h1>slide 6</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-7.jpg" alt="" class="img-responsive" />
+                <h1>slide 7</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-8.jpg" alt="" class="img-responsive" />
+                <h1>slide 8</h1>
+            </div>
+            <div class="slide">
+                <img src="images/home-8.jpg" alt="" class="img-responsive" />
+                <h1>slide 8</h1>
             </div>
         </div>
 
@@ -68,19 +84,27 @@
                         <p>J.T. Lipovsky Excavation provides reliable services for our customers at fair prices in Coastal Fairfield County Connecticut. We provide a full range of services from Site Excavation to Home Construction.</p>
                         <p>J.T. Lipovsky Excavation Family owned and operated in Shelton, Connecticut for over 45 years. There is no job too big or small. <b>Free Estimates!</b></p>
 
+                        <!-- Google Map -->
+                        <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDVOFUN7ljMAyFt5EjHPfu9gk8-OGES3jY&q=JT+LIPOVSKY+EXCAVATING" allowfullscreen>
+                        </iframe>
+
+                        <!-- Facebook -->
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-page" data-href="https://www.facebook.com/JtLipovskyExcavation/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/JtLipovskyExcavation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/JtLipovskyExcavation/">Facebook</a></blockquote></div>
+
+
                     </div>
                 </section>
                 <section class="services">
                     <div class="inner">
-
-                    <h1 class="section-header">Services</h1>
-                        <!-- <div class="services-slider">
-                                <img src="images/services-2.jpg" alt="">
-                                <img src="images/services-4.jpg" alt="">
-                                <img src="images/services-5.jpg" alt="">
-                            </div>
-
-                        </div> -->
+                        <h1 class="section-header">Services</h1>
                         <ul class="services-list">
                             <li>Excavation</li>
                             <li>Home construction &amp; additions</li>
@@ -92,50 +116,39 @@
                             <li>Sewer &amp; water lines</li>
                             <li>Storm drainage</li>
                             <li>Underground utilities</li>
-                            <li>Overweight hauling &amp; transport</li>
+                            <li>Hauling &amp; transport</li>
                             <li>... and more!</li>
                         </ul>
-</div>
-
-
+                        <img src="images/excavator.png" alt="excavator">
+                        <img src="images/excavator-2.png" alt="excavator">
+                        <img src="images/services-1.jpg" alt="services">
+                        <img src="images/services-2.jpg" alt="services">
+                        <img src="images/services-3.png" alt="services">
+                    </div>
                 </section>
 
                 <section class="contact">
                     <div class="inner">
-                    <h1 class="section-header">Contact</h1>
-                    <img src="images/contact-1.jpg">
-                    <h2>Contact us today for your free estimate!</h2>
-                    <h1>203-913-3013</h1>
-                    <!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-                    <div class="fb-page" data-href="https://www.facebook.com/JtLipovskyExcavation/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/JtLipovskyExcavation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/JtLipovskyExcavation/">Facebook</a></blockquote></div>
+                        <h1 class="section-header">Contact</h1>
+                        <h2>Contact J.T. Lipovsky for your FREE estimate!</h2>
+                        <h2>203-913-3013</h2>
+                        <h2>dirtman33085@gmail.com</h2>
 
-                <iframe
-                width="600"
-                height="450"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDVOFUN7ljMAyFt5EjHPfu9gk8-OGES3jY
-                &q=JT+LIPOVSKY+EXCAVATING" allowfullscreen>
-                </iframe> -->
-            </div>
+                        <img class="contact-sign" alt="Contact Us 2039133013" src="images/contact-1.jpg">
+
+
+                    </div>
                 </section>
             </div> <!-- End .sections -->
 
         </main>
         <footer>
             <div class="inner">
-                <p>&copy; Copyright 2017 J.T. Lipovsky Excavation</p>
+                <span>&copy; Copyright 2017 J.T. Lipovsky Excavation</span>
             </div>
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
-
         <script type="text/javascript" src="scripts.js"></script>
     </body>
 </html>
