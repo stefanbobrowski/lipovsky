@@ -1,5 +1,11 @@
 console.log('hello there');
-$('.slider').slick({});
+$('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'ease'
+});
 
 $('.slide img').css('visibility', '0');
 var slider = $('.slider');
