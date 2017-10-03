@@ -150,24 +150,25 @@ header {
     justify-content: space-between;
     flex-wrap: wrap; }
     header nav a {
-      padding: 0 15px;
+      margin-right: 40px;
       font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #333;
       transition: color 0.3s ease; }
+      header nav a:last-of-type {
+        margin-right: 0; }
       header nav a:hover {
         color: #5B1612; }
   header .call-us {
     display: flex;
     align-items: center;
-    min-width: 180px;
-    padding-right: 20px; }
+    min-width: 160px; }
     header .call-us img {
       display: block;
       height: 16px;
-      margin-right: 5px; }
+      margin-right: 7px; }
     header .call-us .number {
       font-size: 18px;
       font-weight: 900;
@@ -183,15 +184,16 @@ header {
   width: 100%;
   margin: 0px auto;
   text-align: center;
-  background-color: #F2E4CD; }
+  background-color: #fff; }
   .slider .slide {
+    position: relative;
     display: flex;
     flex: 1 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    max-height: calc(80vh - 146px);
+    max-height: calc(100vh - 146px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
@@ -200,25 +202,33 @@ header {
       margin: auto;
       visibility: hidden;
       z-index: 0; }
+    .slider .slide h1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      color: #F2E4CD;
+      background-color: rgba(0, 0, 0, 0.5); }
   .slider .slick-arrow {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: rgba(91, 22, 18, 0.8);
     opacity: 1;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    z-index: 3; }
+    .slider .slick-arrow.slick-prev {
+      left: 0; }
+    .slider .slick-arrow.slick-next {
+      right: 0; }
     .slider .slick-arrow:hover {
       background-color: rgba(242, 228, 205, 0.8); }
       .slider .slick-arrow:hover:before {
-        color: #5B1612; }
-    .slider .slick-arrow:before {
-      opacity: 1;
-      color: #F2E4CD; }
-    .slider .slick-arrow.slick-prev {
-      left: 0;
-      z-index: 5; }
-    .slider .slick-arrow.slick-next {
-      right: 0; }
+        color: #5B1612;
+        opacity: 1; }
+  .slider .slick-dots li.slick-active button:before {
+    color: #5B1612; }
 
 main {
   flex: 1;
@@ -233,7 +243,7 @@ main {
     text-transform: uppercase; }
   .sections section p {
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.6;
     color: #333; }
@@ -244,11 +254,15 @@ main {
     padding: 0 20px; }
   .about .plugin-wrapper {
     display: flex; }
-    .about .plugin-wrapper iframe {
-      flex: 1 auto; }
-    .about .plugin-wrapper .fb-page {
-      max-width: 340px;
-      width: 100%; }
+    .about .plugin-wrapper .gmap {
+      width: 50%; }
+      .about .plugin-wrapper .gmap iframe {
+        width: 100%;
+        height: 500px; }
+    .about .plugin-wrapper .fbook {
+      width: 50%; }
+      .about .plugin-wrapper .fbook .fb-page {
+        width: 100%; }
 
 .services .inner {
   padding: 0 20px; }
@@ -256,10 +270,6 @@ main {
 .contact {
   text-align: center;
   background-color: rgba(242, 228, 205, 0.8); }
-  .contact h2 {
-    margin-bottom: 10px; }
-  .contact .contact-sign {
-    margin-top: 20px; }
 
 footer {
   padding: 5px 10px;

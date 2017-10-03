@@ -2,9 +2,7 @@ console.log('hello there');
 $('.slider').slick({
     dots: true,
     infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'ease'
+    speed: 500
 });
 
 $('.slide img').css('visibility', '0');
