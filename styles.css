@@ -60,6 +60,8 @@ input:-moz-placeholder {
 a {
   text-decoration: none;
   color: #333; }
+  a:hover {
+    color: #5B1612; }
 
 p {
   margin-bottom: 10px; }
@@ -70,7 +72,8 @@ h1, h2, h3 {
 .inner {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 20px; }
 
 body {
   display: flex;
@@ -78,7 +81,8 @@ body {
   min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  background-color: #FFF; }
+  background-color: #FFF;
+  overflow-x: hidden; }
 
 header {
   position: relative;
@@ -94,7 +98,8 @@ header {
   header .inner {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 0; }
   header .title {
     position: relative;
     padding: 10px 20px 10px 200px;
@@ -150,17 +155,43 @@ header {
     justify-content: space-between;
     flex-wrap: wrap; }
     header nav a {
-      margin-right: 40px;
       font-size: 18px;
-      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #333;
-      transition: color 0.3s ease; }
-      header nav a:last-of-type {
+      letter-spacing: 1px; }
+    header nav > a {
+      margin-right: 40px;
+      font-weight: 900;
+      color: #333; }
+      header nav > a:last-of-type {
         margin-right: 0; }
-      header nav a:hover {
+      header nav > a:hover {
         color: #5B1612; }
+    header nav .nav-control {
+      display: none; }
+      header nav .nav-control:hover {
+        cursor: pointer; }
+    header nav .mobile-nav {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 300px;
+      background-color: #5B1612;
+      z-index: 15; }
+      header nav .mobile-nav.active {
+        display: flex; }
+      header nav .mobile-nav a, header nav .mobile-nav h1 {
+        color: #fff; }
+        header nav .mobile-nav a:hover, header nav .mobile-nav h1:hover {
+          color: #F2E4CD; }
+      header nav .mobile-nav a {
+        font-size: 22px;
+        margin-bottom: 16px; }
   header .call-us {
     display: flex;
     align-items: center;
@@ -173,7 +204,8 @@ header {
       font-size: 18px;
       font-weight: 900;
       line-height: 16px;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      padding-right: 10px; }
 
 .slider {
   display: flex;
@@ -237,45 +269,139 @@ main {
 .sections section {
   padding: 50px 0; }
   .sections section .section-header {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     font-size: 52px;
     font-weight: 900;
     text-transform: uppercase; }
+  .sections section .two-column {
+    display: flex;
+    justify-content: space-between; }
+    .sections section .two-column .left, .sections section .two-column .right {
+      width: 100%;
+      max-width: 500px; }
+    .sections section .two-column .left {
+      padding-right: 10px; }
+    .sections section .two-column .right {
+      padding-left: 10px; }
   .sections section p {
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 12px;
+    font-size: 20px;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #333; }
 
 .about {
   background-color: rgba(242, 228, 205, 0.8); }
-  .about .inner {
-    padding: 0 20px; }
-  .about .plugin-wrapper {
-    display: flex; }
-    .about .plugin-wrapper .gmap {
-      width: 50%; }
-      .about .plugin-wrapper .gmap iframe {
-        width: 100%;
-        height: 500px; }
-    .about .plugin-wrapper .fbook {
-      width: 50%; }
-      .about .plugin-wrapper .fbook .fb-page {
-        width: 100%; }
+  .about .two-column .left p {
+    max-width: 500px; }
+    .about .two-column .left p a {
+      font-weight: bold; }
+  .about .two-column .left .callout {
+    margin-top: 26px; }
+    .about .two-column .left .callout a {
+      padding: 5px 10px;
+      color: #5B1612;
+      border: 3px solid #5B1612;
+      border-radius: 5px;
+      background-color: #F2E4CD;
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: all 0.3s ease; }
+      .about .two-column .left .callout a:hover {
+        color: #F2E4CD;
+        background-color: #5B1612; }
+  .about .two-column .right .gmap {
+    width: 100%;
+    max-width: 500px; }
+    .about .two-column .right .gmap iframe {
+      width: 100%;
+      height: 500px; }
 
-.services .inner {
-  padding: 0 20px; }
+.services .left .services-list {
+  list-style-image: url("images/list-logo.png");
+  padding-left: 32px; }
+  .services .left .services-list li {
+    font-size: 20px; }
+
+.services .right img {
+  width: 100%; }
 
 .contact {
   text-align: center;
   background-color: rgba(242, 228, 205, 0.8); }
+  .contact h2 {
+    font-weight: 800;
+    margin-bottom: 5px; }
+  .contact .contact-img {
+    width: 500px; }
+  .contact .contact-sign {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0 20px 0; }
+  .contact .fbook {
+    margin-top: 20px;
+    overflow-x: hidden; }
 
 footer {
-  padding: 5px 10px;
+  padding: 10px 10px;
   color: #fff;
   background-color: #5B1612; }
   footer .inner {
     display: flex;
     justify-content: center;
     align-items: center; }
+
+@media screen and (max-width: 1060px) {
+  header nav > a {
+    margin-right: 20px; } }
+
+@media screen and (max-width: 1000px) {
+  header .title {
+    padding-left: 140px; }
+  header nav a {
+    font-size: 16px; } }
+
+@media screen and (max-width: 900px) {
+  header nav > a {
+    display: none; }
+  header nav .nav-control {
+    display: block; } }
+
+@media screen and (max-width: 800px) {
+  .section-header {
+    text-align: center; }
+  .sections section .two-column {
+    flex-direction: column;
+    align-items: center; }
+    .sections section .two-column .left {
+      margin-bottom: 40px;
+      padding-right: 0; }
+    .sections section .two-column .right {
+      padding-left: 0; }
+  p {
+    text-align: center; }
+  .callout {
+    text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  header .inner > .call-us {
+    display: none; }
+  header .inner nav {
+    margin: auto; } }
+
+@media screen and (max-width: 500px) {
+  header .title {
+    padding-left: 4%;
+    padding-right: 4%; }
+    header .title img, header .title .bar {
+      display: none; }
+  .sections section .section-header {
+    font-size: 40px;
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 400px) {
+  footer {
+    font-size: 12px; }
+  .about .two-column .left .callout a {
+    font-size: 24px; } }
