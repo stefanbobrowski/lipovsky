@@ -321,7 +321,12 @@ header {
 
 main {
 	flex: 1;
-    background-color: #fff;
+	background-color: #fff;
+	
+	a {
+		text-decoration: underline;
+		font-weight: bold;
+	}
 }
 
 .sections {
@@ -370,9 +375,7 @@ main {
 		.left {
 			p {
 				max-width: 500px;
-				a {
-					font-weight: bold;
-				}
+		
 			}
 
 			.callout {
@@ -436,6 +439,12 @@ main {
 	h2 {
 		font-weight: 800;
 		margin-bottom: 5px;
+
+		&.phone {
+			color: $color-1;
+			font-size: 40px;
+			font-weight: 900;
+		}
 	}
 
 	.contact-img {
@@ -449,6 +458,10 @@ main {
 	.fbook {
 		margin-top: 20px;
 		overflow-x: hidden;
+
+		.fb-page {
+			border: 3px solid $color-1;
+		}
 	}
 }
 

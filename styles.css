@@ -265,6 +265,9 @@ header {
 main {
   flex: 1;
   background-color: #fff; }
+  main a {
+    text-decoration: underline;
+    font-weight: bold; }
 
 .sections section {
   padding: 50px 0; }
@@ -294,8 +297,6 @@ main {
   background-color: rgba(242, 228, 205, 0.8); }
   .about .two-column .left p {
     max-width: 500px; }
-    .about .two-column .left p a {
-      font-weight: bold; }
   .about .two-column .left .callout {
     margin-top: 26px; }
     .about .two-column .left .callout a {
@@ -333,6 +334,10 @@ main {
   .contact h2 {
     font-weight: 800;
     margin-bottom: 5px; }
+    .contact h2.phone {
+      color: #5B1612;
+      font-size: 40px;
+      font-weight: 900; }
   .contact .contact-img {
     width: 500px; }
   .contact .contact-sign {
@@ -342,6 +347,8 @@ main {
   .contact .fbook {
     margin-top: 20px;
     overflow-x: hidden; }
+    .contact .fbook .fb-page {
+      border: 3px solid #5B1612; }
 
 footer {
   padding: 10px 10px;
